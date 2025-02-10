@@ -1,9 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../src/pages/Home";
-import About from "../src/pages/About";
-import Navbar from "../src/components/Navbar";
-import Footer from "../src/components/Footer";
-import Sidebar from "../src/components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import ItemDetails from "./pages/ItemDetails";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
 import "./App.css";
 
 function App() {
@@ -14,9 +16,10 @@ function App() {
         <Sidebar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<h2>404 Not Found</h2>} />
+            <Route path="/item/:id" element={<ItemDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </div>
