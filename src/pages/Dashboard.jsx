@@ -20,7 +20,6 @@ function Dashboard() {
 
   return (
     <div>
-      <h2>Dashboard</h2>
       <AddItemForm onAdd={addProduct} />
       <List products={products} onDelete={deleteProduct} />
     </div>

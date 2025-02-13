@@ -18,15 +18,15 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="main-layout">
+      <div className="flex flex-1">
         <Sidebar />
-        <div className="content">
+        <div className="flex-1 p-6 bg-gray-100 min-h-screen">
           <Routes>
             <Route path="/" element={<Dashboard products={products} setProducts={setProducts} />} />
             <Route path="/about" element={<About />} />
-            <Route path="/item/:id" element={<ItemDetails products={products} onUpdate={updateProduct} />}/>
+            <Route path="/item/:id" element={<ItemDetails products={products} onUpdate={updateProduct} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
