@@ -16,7 +16,7 @@ function AddItemForm({ onAdd }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!newItem.title || !newItem.price || !newItem.stock) return;
-        onAdd({ ...newItem, id: Date.now(), price: (newItem.price), stock: (newItem.stock) });
+        onAdd({ ...newItem, id: (newItem.id), price: (newItem.price), stock: (newItem.stock) });
         setNewItem({ title: "", description: "", price: "", stock: "", thumbnail: "" });
     };
 
